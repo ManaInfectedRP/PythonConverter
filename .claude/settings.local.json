@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python -c \"import mutagen, imageio_ffmpeg, PIL; print\\('deps ok'\\)\")",
+      "Bash(pip install:*)",
+      "Bash(python -m pip install -r requirements.txt)",
+      "Bash(python convert.py .\\\\\\\\Music -o .\\\\\\\\out --recursive)",
+      "Bash(python convert.py ./Music -o ./out --recursive)",
+      "Bash(python convert.py Music -o out --recursive --overwrite)"
+    ]
+  }
+}

@@ -219,7 +219,10 @@ def run_ffmpeg(
         "-movflags", "+faststart",
         str(out_path),
     ]
-    result = subprocess.run(cmd, capture_output=True, text=True)
+    result = subprocess.run(
+        cmd, capture_output=True, text=True,
+        encoding="utf-8", errors="replace",
+    )
     if result.returncode != 0:
         raise RuntimeError(
             f"ffmpeg failed ({result.returncode}) for {mp3_path}:\n{result.stderr}"

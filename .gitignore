@@ -8,5 +8,6 @@ venv/
 
 # Test artifacts
 *.mp4
+*.mp3
 
 /Music
